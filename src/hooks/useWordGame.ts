@@ -1,11 +1,6 @@
 import { useState, useEffect } from 'react';
 import { validarPalabra } from '../service/api';
-import {
-  calcularPuntos,
-  esCadenaValida,
-  fueUsada,
-  obtenerProximaLetra,
-} from '../utils/gameRules';
+import { calcularPuntos, esCadenaValida, fueUsada } from '../utils/gameRules';
 
 export function useWordGame() {
   const [chain, setChain] = useState<string[]>([]);
@@ -55,10 +50,7 @@ export function useWordGame() {
 
     const lastWord = chain[chain.length - 1];
     if (!esCadenaValida(lastWord, cleanWord)) {
-      const expected = obtenerProximaLetra(lastWord);
-      setErrorMessage(
-        `La palabra no respeta la regla de encadenamiento (debe empezar con "${expected}").`
-      );
+      setErrorMessage('La palabra no respeta la regla de encadenamiento.');
       return false;
     }
 
