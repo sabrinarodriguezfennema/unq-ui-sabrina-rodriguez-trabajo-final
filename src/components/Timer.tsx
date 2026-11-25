@@ -8,7 +8,7 @@ export function Timer({ timeLeft, hasStarted }: TimerProps) {
 
   return (
     <div className={`stat-box ${isWarning ? 'timer-warning' : ''}`}>
-      <span className="stat-label">Tiempo</span>
+      <span className="stat-label">Tiempo: </span>
       <span className="stat-value">{timeLeft}s</span>
     </div>
   );
