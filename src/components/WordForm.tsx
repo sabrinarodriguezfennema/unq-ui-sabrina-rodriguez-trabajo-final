@@ -17,7 +17,7 @@ export function WordForm({
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!input.trim() || isValidating || disabled) return;
+    if (isValidating || disabled) return;
     const isValid = await onSubmitWord(input);
     if (isValid) {
       setInput('');
@@ -38,7 +38,7 @@ export function WordForm({
         disabled={isValidating || disabled}
         autoFocus
       />
-      <button type="submit" disabled={isValidating || disabled || !input.trim()}>
+      <button type="submit" disabled={isValidating || disabled}>
         {isValidating ? 'Validando...' : 'Enviar'}
       </button>
     </form>

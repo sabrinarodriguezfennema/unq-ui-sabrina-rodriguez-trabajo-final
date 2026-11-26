@@ -34,7 +34,10 @@ export function useWordGame() {
     if (isValidating || isGameOver) return false;
 
     const cleanWord = rawWord.trim().toLowerCase();
-    if (!cleanWord) return false;
+    if (!cleanWord) {
+      setErrorMessage('Por favor, ingresá una palabra.');
+      return false;
+    }
 
     setErrorMessage('');
 
