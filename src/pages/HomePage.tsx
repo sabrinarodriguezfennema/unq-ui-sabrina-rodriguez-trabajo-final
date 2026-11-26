@@ -46,20 +46,45 @@ export function HomePage() {
 
       <p className="instruction-hint">
         {nextLetter
-          ? `Ingresá una palabra que empiece con "${nextLetter}"`
+          ? `Encadená palabras usando la última letra de la anterior antes de que se acabe el tiempo`
           : 'Ingresá cualquier palabra válida en español para comenzar'}
       </p>
 
       {chain.length === 0 && (
-        <div className="game-example">
-          <p>
-            <strong>Ejemplo de cadena:</strong>
-          </p>
-          <p>
-            cas<strong>a</strong> → <strong>a</strong>rbo<strong>l</strong> →{' '}
-            <strong>l</strong>un<strong>a</strong> → <strong>a</strong>vión
-          </p>
-        </div>
+        <section className="chain-section example-section">
+          <h2>Ejemplo de cadena:</h2>
+          <div className="word-chain">
+            <div className="chain-step">
+              <span className="chain-item">
+                cas<strong>a</strong>
+              </span>
+              <span className="chain-arrow" aria-hidden="true">
+                →
+              </span>
+            </div>
+            <div className="chain-step">
+              <span className="chain-item">
+                <strong>a</strong>rbo<strong>l</strong>
+              </span>
+              <span className="chain-arrow" aria-hidden="true">
+                →
+              </span>
+            </div>
+            <div className="chain-step">
+              <span className="chain-item">
+                <strong>l</strong>un<strong>a</strong>
+              </span>
+              <span className="chain-arrow" aria-hidden="true">
+                →
+              </span>
+            </div>
+            <div className="chain-step">
+              <span className="chain-item">
+                <strong>a</strong>vión
+              </span>
+            </div>
+          </div>
+        </section>
       )}
 
       <WordForm
