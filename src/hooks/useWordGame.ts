@@ -10,6 +10,11 @@ export function useWordGame() {
   const [isGameOver, setIsGameOver] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [isValidating, setIsValidating] = useState<boolean>(false);
+  const [isReady, setIsReady] = useState<boolean>(false);
+
+  const startGame = () => {
+    setIsReady(true);
+  };
 
   useEffect(() => {
     if (!hasStarted || isGameOver) return;
@@ -87,5 +92,7 @@ export function useWordGame() {
     errorMessage,
     isValidating,
     submitWord,
+    isReady,
+    startGame,
   };
 }
