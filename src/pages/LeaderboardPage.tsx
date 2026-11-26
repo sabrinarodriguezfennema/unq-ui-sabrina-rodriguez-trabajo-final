@@ -8,6 +8,9 @@ export function LeaderboardPage() {
   return (
     <main className="page-container">
       <header className="game-header">
+        <Link to="/" className="nav-link">
+          Volver
+        </Link>
         <h1>Top 10 Puntajes</h1>
       </header>
 
@@ -42,11 +45,7 @@ export function LeaderboardPage() {
         </table>
       )}
 
-      <div className="actions-group">
-        <Link to="/" className="btn-primary">
-          Volver al Inicio
-        </Link>
-      </div>
+      
     </main>
   );
 }
