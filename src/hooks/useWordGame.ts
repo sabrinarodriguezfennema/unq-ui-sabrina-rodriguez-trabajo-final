@@ -71,11 +71,11 @@ export function useWordGame() {
         setScore((prev) => prev + calcularPuntos(cleanWord));
         setHasStarted(true);
         return true;
-      } else {
-        setErrorMessage('La palabra no existe en el diccionario.');
-        return false;
       }
-    } catch {
+      setErrorMessage('La palabra no existe en el diccionario.');
+      return false;
+    }
+    catch {
       setErrorMessage('Error al validar la palabra.');
       return false;
     } finally {
@@ -89,10 +89,10 @@ export function useWordGame() {
     timeLeft,
     hasStarted,
     isGameOver,
-    errorMessage,
-    isValidating,
-    submitWord,
     isReady,
+    isValidating,
+    errorMessage,
     startGame,
+    submitWord,
   };
 }
