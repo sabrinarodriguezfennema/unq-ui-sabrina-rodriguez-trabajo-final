@@ -14,10 +14,11 @@ export function WordForm({
   onSubmitWord,
 }: WordFormProps) {
   const [input, setInput] = useState<string>('');
+  const isBlocked = isValidating || disabled;
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (isValidating || disabled) return;
+    if (isBlocked) return;
     const isValid = await onSubmitWord(input);
     if (isValid) {
       setInput('');
@@ -35,10 +36,10 @@ export function WordForm({
             ? `Palabra con "${nextLetter}"...`
             : 'Escribí la primera palabra...'
         }
-        disabled={isValidating || disabled}
+        disabled={isBlocked}
         autoFocus
       />
-      <button type="submit" disabled={isValidating || disabled}>
+      <button type="submit" disabled={isBlocked}>
         {isValidating ? 'Validando...' : 'Enviar'}
       </button>
     </form>
