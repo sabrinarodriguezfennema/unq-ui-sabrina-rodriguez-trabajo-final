@@ -6,20 +6,24 @@ Juego web interactivo de palabras encadenadas está desarrollado con React y Typ
 
 ## Instalación
 - Clonar el repositorio
+
   ```bash
   git clone https://github.com/sabrinarodriguezfennema/unq-ui-sabrina-rodriguez-trabajo-final
   
 - Entrar al directorio del proyecto
+
   ```bash
-  cd <unq-ui-sabrina-rodriguez-trabajo-final>
+  cd unq-ui-sabrina-rodriguez-trabajo-final
   
 - Instalar dependencias
+
   ```bash
   npm install
   
 
 ## Ejecución local (Modo desarrollo)
 - Levanta el servidor local con recarga en caliente (HMR): 
+
   ```bash
   npm run dev
   
