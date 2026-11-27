@@ -1,32 +1,28 @@
-# React + TypeScript + Vite
+# Palabras Encadenadas
+Juego web interactivo de palabras encadenadas está desarrollado con React y TypeScript. El objetivo es formar la cadena de palabras más larga posible encadenando la última letra de cada palabra con la primera de la siguiente antes de que se agote el tiempo.
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Requisitos
+- Node.js instalado.
 
-Currently, two official plugins are available:
+## Instalación
+- Clonar el repositorio
+  ```bash
+  git clone https://github.com/sabrinarodriguezfennema/unq-ui-sabrina-rodriguez-trabajo-final
+  
+- Entrar al directorio del proyecto
+  ```bash
+  cd <unq-ui-sabrina-rodriguez-trabajo-final>
+  
+- Instalar dependencias
+  ```bash
+  npm install
+  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Ejecución local (Modo desarrollo)
+- Levanta el servidor local con recarga en caliente (HMR): 
+  ```bash
+  npm run dev
+  
+- Abrir http://localhost:5173 en el navegador (o la URL local que indique la terminal)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
