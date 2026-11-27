@@ -3,6 +3,7 @@ import { HomePage } from './pages/HomePage';
 import { GameOverPage } from './pages/GameOverPage';
 import { LeaderboardPage } from './pages/LeaderboardPage';
 import './App.css';
+import { NotFoundPage } from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/game-over" element={<GameOverPage />} />
         <Route path="/leaderboard" element={<LeaderboardPage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<NotFoundPage />}/>
       </Routes>
     </BrowserRouter>
   );
