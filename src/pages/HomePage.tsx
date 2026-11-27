@@ -18,9 +18,9 @@ export function HomePage() {
     isGameOver,
     errorMessage,
     isValidating,
-    submitWord,
     isReady,
     startGame,
+    submitWord,
   } = useWordGame();
 
   const nextLetter = obtenerProximaLetra(chain[chain.length - 1]);
