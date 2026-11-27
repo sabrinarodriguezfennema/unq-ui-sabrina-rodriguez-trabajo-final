@@ -21,7 +21,7 @@ Juego web interactivo de palabras encadenadas está desarrollado con React y Typ
   npm install
   
 
-## Ejecución local (Modo desarrollo)
+## Ejecución local 
 - Levanta el servidor local con recarga en caliente (HMR): 
 
   ```bash
