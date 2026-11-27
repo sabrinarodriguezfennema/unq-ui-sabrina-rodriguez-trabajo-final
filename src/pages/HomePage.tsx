@@ -40,7 +40,6 @@ export function HomePage() {
         Ranking
       </Link>
         <h1>Palabras Encadenadas</h1>
-
       </header>
 
       {!isReady ? (
@@ -89,7 +88,6 @@ export function HomePage() {
             </button>
           </div>
         </>) : (<>
-
           <section className="stats-bar">
             <Timer timeLeft={timeLeft} hasStarted={hasStarted} />
             <ScoreBoard score={score} wordsCount={chain.length} />
@@ -112,7 +110,6 @@ export function HomePage() {
           <WordChain chain={chain} />
         </>)
       }
-
     </main>
   );
 }
