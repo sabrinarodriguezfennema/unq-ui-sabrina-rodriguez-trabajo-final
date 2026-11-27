@@ -44,8 +44,6 @@ export function LeaderboardPage() {
           </tbody>
         </table>
       )}
-
-      
     </main>
   );
 }
