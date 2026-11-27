@@ -275,6 +275,62 @@
     transform: translateY(0);
   }
 }
+.leaderboard-header {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.leaderboard-header .nav-link {
+  align-self: flex-end;
+}
+
+.leaderboard-header h1 {
+  font-size: 1.65rem;
+  line-height: 1.4;
+  margin: 0;
+  text-shadow: 3px 3px 0px #dfd6c3;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 3px solid #181818;
+  border-radius: 0;
+  box-shadow: 4px 4px 0px #181818;
+  font-size: 0.9rem;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 0.8rem 0.9rem;
+  text-align: left;
+  border-bottom: 2px solid #181818;
+}
+
+.leaderboard-table th {
+  background-color: #e6dabc;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.leaderboard-table tbody tr:nth-child(even) {
+  background-color: #f6f2e9;
+}
+
+@media (max-width: 520px) {
+  .leaderboard-header .nav-link {
+    align-self: center;
+  }
+
+  .leaderboard-header h1 {
+    font-size: 1.25rem;
+  }
+}
 
 @media (max-width: 520px) {
   .game-header .nav-link {
@@ -333,5 +389,27 @@
   .btn-primary {
     font-size: 0.65rem;
     padding: 0.60rem 1.0rem;
+  }
+
+  .leaderboard-header .nav-link {
+    align-self: center;
+  }
+
+  .leaderboard-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .leaderboard-table {
+    font-size: 0.7rem;
+  }
+
+  .leaderboard-table th {
+    font-size: 0.65rem;
+    padding: 0.55rem 0.45rem;
+  }
+
+  .leaderboard-table td {
+    padding: 0.55rem 0.45rem;
+    word-break: break-word;
   }
 }
