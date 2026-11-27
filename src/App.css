@@ -322,6 +322,14 @@
   background-color: #f6f2e9;
 }
 
+.game-over-container h1 {
+  font-size: 1.65rem;
+  line-height: 1.4;
+  color: #181818;
+  margin: 0;
+  text-shadow: 3px 3px 0px #dfd6c3;
+}
+
 @media (max-width: 520px) {
   .leaderboard-header .nav-link {
     align-self: center;
@@ -411,5 +419,9 @@
   .leaderboard-table td {
     padding: 0.55rem 0.45rem;
     word-break: break-word;
+  }
+
+  .game-over-container h1 {
+    font-size: 1.25rem;
   }
 }
